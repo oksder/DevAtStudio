@@ -224,13 +224,34 @@ header {
   position: absolute;
   right: -100px;
   bottom: 40px;
+  -webkit-animation: spin 15s linear infinite;
+          animation: spin 15s linear infinite;
 }
 
+@-webkit-keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
 .medium-figure {
   position: absolute;
   right: 100px;
   bottom: 450px;
   transform: rotate(150deg);
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
 }
 
 .small-figure {
@@ -238,6 +259,8 @@ header {
   right: -60px;
   bottom: 420px;
   transform: rotate(5deg);
+  -webkit-animation: spin 10s linear infinite;
+          animation: spin 10s linear infinite;
 }
 
 .scroll {
@@ -245,7 +268,7 @@ header {
   bottom: 10%;
   left: 50%;
 }
-.scroll :hover {
+.scroll:hover {
   opacity: 0.7;
   cursor: pointer;
 }
