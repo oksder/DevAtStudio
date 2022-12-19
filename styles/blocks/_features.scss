@@ -1,0 +1,99 @@
+.features {
+  margin: 200px 0;
+}
+
+.features-card-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-evenly;
+  gap: 100px;
+}
+
+.features-card {
+  position: relative;
+  @include flexCenter(row);
+  padding: 0px;
+  gap: 80px;
+
+  width: 370px;
+}
+
+.features-heading:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 120px;
+  left: 370px;
+  bottom: -10px;
+  background: $yellow;
+}
+
+.features-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 350px;
+}
+
+.features-card:before {
+  content: "";
+  position: absolute;
+  left: -35px;
+
+  background-image: url("/img/circle.png");
+
+  width: 165px;
+  height: 165px;
+}
+
+.features-card--1:after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -15px;
+  top: 30px;
+
+  background: $yellow;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.features-card--2:after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 105px;
+  top: 110px;
+
+  background: $yellow;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.features-card--3:after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: -35px;
+  bottom: 50px;
+
+  background: $yellow;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.features-card--4:after {
+  content: "";
+  position: absolute;
+  width: 23px;
+  height: 23px;
+  left: 40px;
+  bottom: 5px;
+
+  background: $yellow;
+  box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}

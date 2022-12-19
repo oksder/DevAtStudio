@@ -1,0 +1,85 @@
+header {
+  width: 65px;
+  height: 100vh;
+  float: left;
+  position: fixed;
+
+  background: linear-gradient($green 0%, $purple 100%);
+}
+
+.rail-navigation {
+  @include flexCenter(column);
+  gap: 100px;
+}
+
+.page-buttons {
+  @include flexCenter(column);
+  position: relative;
+  width: 65px;
+  gap: 30px;
+
+  &::before {
+    content: "";
+
+    position: relative;
+
+    background-image: url("/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    width: 10px;
+    height: 50px;
+  }
+
+  &::after {
+    content: "";
+
+    position: relative;
+
+    background-image: url("/img/arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    width: 10px;
+    height: 50px;
+    transform: rotate(180deg);
+  }
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 50%;
+  display: flex;
+  transition: background-color 0.5s ease;
+  &:hover {
+    background: #ffffff;
+  }
+}
+
+.dot-active {
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+  background: $yellow;
+  border-radius: 50%;
+  display: flex;
+  transition: background-color 0.5s ease;
+
+  &:hover {
+    background: #cd8a04;
+  }
+}
+
+.social-media-header {
+  @include flexCenter(column);
+  padding: 0px;
+  gap: 30px;
+}
+
+.social-media-header a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
