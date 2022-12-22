@@ -5,10 +5,10 @@
       href="https://fonts.googleapis.com/css2?family=Nunito&display=swap"
       rel="stylesheet"
     />
+    <link href="./styles/style.css" rel="stylesheet" />
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./styles/style.css" rel="stylesheet" />
     <title>Devat Studio</title>
   </head>
   <body>
@@ -274,46 +274,68 @@
         </ul>
       </section>
       <section class="contact">
-        <h2>Contact Us</h2>
-        <form action="/action_page.php" method="get">
+        <h2 class="contact-heading">Contact Us</h2>
+        <form class="contact-form" action="/action_page.php" method="get">
+          <div class="form-names">
+            <input
+              class="form-name input"
+              type="text"
+              id="fullname"
+              name="fullname"
+              placeholder="Full Name"
+              required
+            />
+            <input
+              class="form-companyname input"
+              type="text"
+              id="companyname"
+              name="companyname"
+              placeholder="Company Name"
+            />
+          </div>
           <input
-            type="text"
-            id="fullname"
-            name="fullname"
-            placeholder="Full Name"
-          />
-          <input
-            type="text"
-            id="companyname"
-            name="companyname"
-            placeholder="Company Name"
-          /><br />
-          <input
+            class="form-email input"
             type="email"
             id="email"
             name="email"
             placeholder="E-mail Address"
-          /><br />
-          <input
-            type="text"
+            required
+          />
+          <textarea
+            class="form-message input"
             id="message"
             name="message"
+            rows="4"
+            cols="50"
             placeholder="Enter your message..."
-          /><br /><br />
-          <input
-            type="file"
-            id="myfile"
-            name="myfile"
-            accept="img/attachment-icon.svg"
-          />
-          <label for="myfile">Attach File</label> <br />
-          <input class="primary-button" type="submit" value="Send" />
+            required
+          ></textarea>
+          <div class="files-send">
+            <input
+              class="form-file"
+              type="file"
+              id="upload-file"
+              name="myfile"
+            />
+            <label class="files-label" for="upload-file">
+              <img
+                class="attach file"
+                src="img/attachment-icon.svg"
+                alt="attachment icon"
+                width="35"
+                height="35"
+              />
+              Attach File</label
+            >
+            <input class="primary-button" type="submit" value="Send" />
+          </div>
         </form>
         <img
+          class="letter-image"
           src="img/letter-opened.png"
           alt="Illustration of a letter"
-          width="839"
-          height="824"
+          width="809"
+          height="794"
         />
       </section>
       <footer>

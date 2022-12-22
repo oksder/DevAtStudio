@@ -76,6 +76,10 @@
 .card-back-button {
   border-radius: 0 0 25px 25px;
   cursor: pointer;
+
+  &:active {
+    transform: none;
+  }
 }
 
 .card-front {

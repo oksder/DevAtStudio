@@ -1,0 +1,108 @@
+.contact {
+  position: relative;
+  @include flexCenter(column);
+  margin: 300px 0;
+}
+
+.contact-heading:after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 120px;
+  left: 5px;
+  bottom: -10px;
+  background: $yellow;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  width: 550px;
+  height: auto;
+  padding: 55px;
+  padding-bottom: 150px;
+
+  background: linear-gradient(
+    117.43deg,
+    rgba(255, 255, 255, 0.3) 0%,
+    rgba(255, 255, 255, 0.1) 100.42%
+  );
+  border: 1px solid #ffffff;
+  backdrop-filter: blur(200px);
+  border-radius: 25px;
+  row-gap: 30px;
+}
+
+.input {
+  width: auto;
+  height: 50px;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.4);
+  color: #fff;
+  border-radius: 20px;
+  border: none;
+
+  &::placeholder {
+    color: #fff;
+    opacity: 0.6;
+  }
+
+  &:focus {
+    background: rgba(255, 255, 255, 0.863);
+
+    &::placeholder {
+      color: $bg-color;
+      opacity: 0.6;
+    }
+  }
+
+  &:hover {
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.form-names {
+  display: flex;
+  justify-content: space-between;
+
+  input {
+    width: 205px;
+  }
+}
+
+.form-message {
+  height: 150px;
+}
+
+.files-send {
+  @include flexCenter(row);
+  gap: 85px;
+}
+
+.form-file[type="file"] {
+  display: none;
+}
+
+.files-label {
+  @include flexCenter(row);
+  color: #fff;
+  height: 35px;
+  width: 151px;
+  gap: 20px;
+  user-select: none;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    transform: scale(0.9);
+  }
+}
+
+.letter-image {
+  position: absolute;
+  z-index: -1;
+  top: 205px;
+}
