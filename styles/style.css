@@ -160,7 +160,6 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 0px;
   gap: 30px;
 }
 
@@ -642,4 +641,44 @@ header {
   position: absolute;
   z-index: -1;
   top: 205px;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 70px 0;
+  gap: 200px;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.social-media-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.social-media-footer a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.contact-email {
+  color: #fff;
+  cursor: pointer;
+}
+.contact-email:hover {
+  text-decoration: underline;
+}
+.contact-email:active {
+  outline: none;
+  transform: scale(0.9);
 }/*# sourceMappingURL=style.css.map */

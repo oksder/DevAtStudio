@@ -1,0 +1,35 @@
+footer {
+  @include flexCenter(row);
+  padding: 70px 0;
+  gap: 200px;
+}
+
+.footer-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.social-media-footer {
+  @include flexCenter(row);
+  gap: 40px;
+}
+
+.social-media-footer a:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.contact-email {
+  color: #fff;
+  cursor: pointer;
+
+  &:hover {
+    text-decoration: underline;
+  }
+
+  &:active {
+    outline: none;
+    transform: scale(0.9);
+  }
+}

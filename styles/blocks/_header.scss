@@ -75,7 +75,6 @@ header {
 
 .social-media-header {
   @include flexCenter(column);
-  padding: 0px;
   gap: 30px;
 }
 
