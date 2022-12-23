@@ -574,7 +574,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 40px;
+  padding-top: 30px;
   transform: rotateY(180deg);
   color: #020e16;
   background-color: #ffffff;
@@ -583,7 +583,6 @@ header {
 
 .card-back-title {
   font-size: 28px;
-  line-height: 27px;
   text-align: center;
   color: #2b5876;
 }
