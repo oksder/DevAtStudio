@@ -99,7 +99,7 @@ header {
   align-items: center;
   flex-direction: column;
   padding: 30px 0;
-  gap: 80px;
+  gap: 130px;
 }
 
 .page-buttons {
@@ -170,147 +170,90 @@ header {
   cursor: pointer;
 }
 
-:root {
-  --menu-speed: 0.75s;
+/* MENU STYLES */
+.hamburger {
+  position: relative;
+  position: block;
+  width: 35px;
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: none;
+  outline: none;
+  border: none;
 }
 
-/* MENU STYLES */
-.toggler {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  cursor: pointer;
-  width: 50px;
-  height: 50px;
+.hamburger .bar,
+.hamburger:after,
+.hamburger:before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 3px;
+  background-color: #fff;
+  margin: 10px 0px;
+  transition: 0.4s;
+}
+
+.hamburger.active:before {
+  transform: rotate(-45deg) translate(-9px, 7px);
+}
+
+.hamburger.active:after {
+  transform: rotate(45deg) translate(-11px, -9px);
+}
+
+.hamburger.active .bar {
   opacity: 0;
 }
 
-.menu-wrap .hamburger {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-  width: 60px;
-  height: 60px;
-  padding: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Hamburger Line */
-.menu-wrap .hamburger > div {
-  position: relative;
-  flex: none;
-  width: 100%;
-  height: 2px;
-  background: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.4s ease;
-}
-
-/* Hamburger Lines - Top & Bottom */
-.menu-wrap .hamburger > div::before,
-.menu-wrap .hamburger > div::after {
-  content: "";
-  position: absolute;
-  z-index: 2;
-  top: -10px;
-  width: 100%;
-  height: 2px;
-  background: inherit;
-}
-
-/* Moves Line Down */
-.menu-wrap .hamburger > div::after {
-  top: 10px;
-}
-
-/* Toggler Animation */
-.menu-wrap .toggler:checked + .hamburger > div {
-  transform: rotate(135deg);
-}
-
-/* Turns Lines Into X */
-.menu-wrap .toggler:checked + .hamburger > div:before,
-.menu-wrap .toggler:checked + .hamburger > div:after {
-  top: 0;
-  transform: rotate(90deg);
-}
-
-/* Rotate On Hover When Checked */
-.menu-wrap .toggler:checked:hover + .hamburger > div {
-  transform: rotate(225deg);
-}
-
-/* Show Menu */
-.menu-wrap .toggler:checked ~ .menu {
-  visibility: visible;
-}
-
-.menu-wrap .toggler:checked ~ .menu > div {
-  transform: scale(1);
-  transition-duration: var(--menu-speed);
-}
-
-.menu-wrap .toggler:checked ~ .menu-links {
-  opacity: 1;
-  transition: opacity 0.4s ease 0.4s;
-}
-
-.menu-wrap .menu {
+.navigation {
   position: fixed;
   top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  visibility: hidden;
-  overflow: hidden;
+  right: 0;
+  top: 100%;
+  width: 96%;
+  min-height: 100vh;
+  display: block;
+  z-index: 2;
+  background: linear-gradient(180deg, #2b5876 0%, #4e4376 100%);
+  transition: 0.4s;
+}
+
+.navigation.active {
   display: flex;
-  align-items: center;
+  flex-direction: column;
   justify-content: center;
+  top: 0;
 }
 
-.menu-wrap .menu-background {
-  background: linear-gradient(112.9deg, #2b5876 0%, #4e4376 100%);
-  width: 200vw;
-  height: 200vw;
-  display: flex;
-  flex: none;
-  align-items: center;
-  justify-content: center;
-  transform: scale(0);
-  transition: all 0.4s ease;
-}
-
-.menu-wrap .menu > div > div {
-  text-align: center;
-  max-width: 90vw;
-  max-height: 100vh;
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.link {
+.nav-link {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size: 20px;
-  padding: 30px;
-}
-
-.link > a {
+  padding: 14px 77px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 50px;
+  text-align: center;
   color: #2b5876;
   background-color: #ffc046;
   text-decoration: none;
-  padding: 15px 30px;
+  font-size: 20px;
   border-radius: 10px;
-  transition: color 0.4s ease;
+  transition: background-color 0.5s ease;
   cursor: pointer;
+}
+.nav-link:hover {
+  background: #fea700;
+}
+.nav-link:active {
+  transform: scale(0.9);
 }
 
 .logo {
@@ -325,6 +268,7 @@ header {
 .main-screen {
   position: relative;
   padding: 30px 0;
+  height: 100vh;
 }
 
 .main-description {
