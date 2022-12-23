@@ -14,7 +14,18 @@
   <body>
     <header>
       <div class="rail-navigation">
-        <button class="hamburger-menu" type="button">Open Menu</button>
+        <div class="menu-wrap">
+          <input type="checkbox" class="toggler" />
+          <div class="hamburger"><div></div></div>
+          <div class="menu">
+            <div class="menu-background">
+              <ul class="menu-links">
+                <li class="link"><a href="index.html">HOME PAGE</a></li>
+                <li class="link"><a href="#">SERVICES</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div class="page-buttons">
           <span class="dot-active" onclick="currentSlide(1)"></span>
           <span class="dot" onclick="currentSlide(2)"></span>
