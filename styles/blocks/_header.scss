@@ -1,18 +1,21 @@
 header {
   position: fixed;
   width: 65px;
-  height: 100vh;
+  height: 100%;
   float: left;
   position: fixed;
+  z-index: 2;
 
   background: linear-gradient($green 0%, $purple 100%);
 }
 
 .rail-navigation {
   position: relative;
-  @include flexCenter(column);
-  padding: 30px 0;
-  gap: 130px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
 }
 
 .page-buttons {

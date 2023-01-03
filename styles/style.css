@@ -87,20 +87,20 @@ h2 {
 header {
   position: fixed;
   width: 65px;
-  height: 100vh;
+  height: 100%;
   float: left;
   position: fixed;
+  z-index: 2;
   background: linear-gradient(#2b5876 0%, #4e4376 100%);
 }
 
 .rail-navigation {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   flex-direction: column;
-  padding: 30px 0;
-  gap: 130px;
+  height: 100%;
 }
 
 .page-buttons {
@@ -363,6 +363,7 @@ header {
 .main-screen {
   position: relative;
   padding: 30px 0;
+  height: 100vh;
 }
 
 .main-description {
