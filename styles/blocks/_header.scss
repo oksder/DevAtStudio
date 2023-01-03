@@ -1,4 +1,5 @@
 header {
+  position: fixed;
   width: 65px;
   height: 100vh;
   float: left;
@@ -86,6 +87,10 @@ header {
 }
 
 /* MENU STYLES */
+.menu-container {
+  z-index: 3;
+}
+
 .hamburger {
   position: relative;
   position: block;
@@ -126,7 +131,7 @@ header {
   top: 0;
   right: 0;
   top: 100%;
-  width: 96%;
+  width: 100%;
   min-height: 100vh;
   display: block;
   z-index: 2;
@@ -135,13 +140,37 @@ header {
 }
 
 .navigation.active {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  @include flexCenter(column);
+
   top: 0;
 }
 
 .nav-link {
+  padding: 14px 77px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 50px;
+
+  text-align: center;
+  color: #fff;
+
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $yellow;
+    transform: scale(0.9);
+  }
+}
+
+.nav-link-active {
   @include flexCenter(column);
   padding: 14px 77px;
   font-weight: 700;
@@ -168,4 +197,75 @@ header {
   &:active {
     transform: scale(0.9);
   }
+}
+
+.dropbtn {
+  color: white;
+  position: relative;
+  background: none;
+  font-size: 20px;
+  width: 300px;
+  border: none;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+
+    position: absolute;
+    right: 70px;
+    top: 5px;
+
+    background-image: url("/img/drop-arrow.svg");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+
+    width: 20px;
+    height: 12px;
+  }
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+
+  z-index: 1;
+}
+
+.dropdown-content a {
+  @include flexCenter(column);
+  color: #fff;
+  padding: 14px 75px;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  max-width: 300px;
+  text-decoration: none;
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: $yellow;
+  color: $green;
+  transition: background-color 0.5s ease;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  color: $yellow;
+  transform: scale(0.9);
+}
+
+.show {
+  display: block;
 }

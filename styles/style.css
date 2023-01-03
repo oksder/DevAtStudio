@@ -85,6 +85,7 @@ h2 {
 }
 
 header {
+  position: fixed;
   width: 65px;
   height: 100vh;
   float: left;
@@ -171,6 +172,10 @@ header {
 }
 
 /* MENU STYLES */
+.menu-container {
+  z-index: 3;
+}
+
 .hamburger {
   position: relative;
   position: block;
@@ -213,7 +218,7 @@ header {
   top: 0;
   right: 0;
   top: 100%;
-  width: 96%;
+  width: 100%;
   min-height: 100vh;
   display: block;
   z-index: 2;
@@ -223,12 +228,34 @@ header {
 
 .navigation.active {
   display: flex;
-  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  flex-direction: column;
   top: 0;
 }
 
 .nav-link {
+  padding: 14px 77px;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  max-width: 300px;
+  margin: 0 auto 50px;
+  text-align: center;
+  color: #fff;
+  text-decoration: none;
+  font-size: 20px;
+  border-radius: 10px;
+  transition: background-color 0.5s ease;
+  cursor: pointer;
+}
+.nav-link:hover, .nav-link:focus {
+  color: #ffc046;
+  transform: scale(0.9);
+}
+
+.nav-link-active {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -249,11 +276,79 @@ header {
   transition: background-color 0.5s ease;
   cursor: pointer;
 }
-.nav-link:hover {
+.nav-link-active:hover {
   background: #fea700;
 }
-.nav-link:active {
+.nav-link-active:active {
   transform: scale(0.9);
+}
+
+.dropbtn {
+  color: white;
+  position: relative;
+  background: none;
+  font-size: 20px;
+  width: 300px;
+  border: none;
+  cursor: pointer;
+}
+.dropbtn::after {
+  content: "";
+  position: absolute;
+  right: 70px;
+  top: 5px;
+  background-image: url("/img/drop-arrow.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 20px;
+  height: 12px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #fff;
+  padding: 14px 75px;
+  margin: 20px 0;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 24px;
+  width: 100%;
+  max-width: 300px;
+  text-decoration: none;
+  display: block;
+  background: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  border-radius: 10px;
+}
+
+.dropdown-content a:hover {
+  background-color: #ffc046;
+  color: #2b5876;
+  transition: background-color 0.5s ease;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+  color: #ffc046;
+  transform: scale(0.9);
+}
+
+.show {
+  display: block;
 }
 
 .logo {
@@ -268,7 +363,6 @@ header {
 .main-screen {
   position: relative;
   padding: 30px 0;
-  height: 100vh;
 }
 
 .main-description {

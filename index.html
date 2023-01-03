@@ -63,8 +63,15 @@
         </div>
       </header>
       <nav class="navigation">
-        <a class="nav-link" href="index.html">HOME PAGE</a>
-        <a class="nav-link" href="#">SERVICES</a>
+        <a class="nav-link-active" href="index.html">HOME PAGE</a>
+        <div class="dropdown">
+          <button onclick="myFunction()" class="dropbtn">SERVICES</button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="#">WEB DESIGN</a>
+            <a href="#">WEB DEVELOPMENT</a>
+            <a href="#">DIGITAL MARKETING</a>
+          </div>
+        </div>
       </nav>
       <div class="container">
         <section class="main-screen">
@@ -396,5 +403,6 @@
       </div>
     </main>
     <script src="/js/navigation.js"></script>
+    <script src="/js/drop-menu.js"></script>
   </body>
 </html>
