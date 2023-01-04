@@ -223,7 +223,7 @@ header {
   display: block;
   z-index: 2;
   background: linear-gradient(180deg, #2b5876 0%, #4e4376 100%);
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
 .navigation.active {
@@ -362,7 +362,7 @@ header {
 
 .main-screen {
   position: relative;
-  padding: 30px 0;
+  padding: 60px 0;
   height: 100vh;
 }
 
