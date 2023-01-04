@@ -288,6 +288,7 @@ header {
   position: relative;
   background: none;
   font-size: 20px;
+  left: -20px;
   width: 300px;
   border: none;
   cursor: pointer;
@@ -866,4 +867,59 @@ footer {
 .contact-email:active {
   outline: none;
   transform: scale(0.9);
+}
+
+.service-section {
+  padding: 60px 0;
+  height: 100vh;
+}
+
+.service-section-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 120px;
+  padding: 180px 0;
+}
+
+.service-photo {
+  border-radius: 100px 0px;
+}
+
+.service-description {
+  width: 690px;
+}
+
+.service-heading {
+  position: relative;
+  font-size: 40px;
+  line-height: 53px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+}
+.service-heading ::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 120px;
+  left: 0;
+  bottom: -10px;
+  background: #ffc046;
+}
+
+.service-section p {
+  padding-top: 50px;
+  font-size: 16px;
+  line-height: 21px;
+}
+
+.service-features {
+  display: flex;
+  gap: 150px;
+  padding-top: 100px;
+}
+
+.service-features li {
+  padding-bottom: 20px;
 }/*# sourceMappingURL=style.css.map */
