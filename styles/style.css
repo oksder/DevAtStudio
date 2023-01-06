@@ -870,8 +870,7 @@ footer {
 }
 
 .service-section {
-  padding: 60px 0;
-  height: 100vh;
+  padding-top: 60px;
 }
 
 .service-section-wrapper {
@@ -880,7 +879,7 @@ footer {
   align-items: center;
   flex-direction: row;
   gap: 120px;
-  padding: 180px 0;
+  padding-top: 180px;
 }
 
 .animated-photo {
@@ -970,4 +969,30 @@ footer {
 .service-features li {
   padding-bottom: 20px;
   list-style: square;
+}
+
+.price-list {
+  position: relative;
+  margin: 300px 0;
+}
+
+.price-list-heading {
+  position: relative;
+}
+.price-list-heading::after {
+  content: "";
+  position: absolute;
+  height: 3px;
+  width: 120px;
+  left: 444px;
+  bottom: -10px;
+  background: #ffc046;
+}
+
+.price-list-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 100px;
 }/*# sourceMappingURL=style.css.map */
