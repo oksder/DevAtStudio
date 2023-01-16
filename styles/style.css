@@ -1043,5 +1043,56 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 100px;
+  gap: 230px;
+}
+
+.price-card {
+  position: relative;
+  text-align: center;
+  font-weight: 700;
+  padding-top: 100px;
+}
+.price-card::before {
+  content: "";
+  position: absolute;
+  left: -60px;
+  top: 0;
+  background-image: url("/img/pricetag.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 252px;
+  height: 497px;
+  z-index: -1;
+}
+
+.price-card-name,
+.price-card-number {
+  padding-bottom: 30px;
+  color: #ffc046;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.dollar {
+  color: #ffc046;
+}
+
+.price-feature {
+  position: relative;
+  padding: 5px 0;
+}
+.price-feature::before {
+  content: "";
+  position: absolute;
+  left: -30px;
+  top: 8px;
+  background-image: url("/img/pricetag-tick.svg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 15px;
+  height: 15px;
+}
+
+.faded {
+  opacity: 0.4;
 }/*# sourceMappingURL=style.css.map */

@@ -95,27 +95,3 @@
   padding-bottom: 20px;
   list-style: square;
 }
-
-.price-list {
-  position: relative;
-  margin: 300px 0;
-}
-
-.price-list-heading {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 120px;
-    left: 444px;
-    bottom: -10px;
-    background: #ffc046;
-  }
-}
-
-.price-list-wrapper {
-  @include flexCenter(row);
-  gap: 100px;
-}
