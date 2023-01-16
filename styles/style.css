@@ -104,59 +104,16 @@ header {
   height: 100%;
 }
 
-.page-buttons {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  position: relative;
-  width: 65px;
-  gap: 30px;
-}
-.page-buttons::before {
-  content: "";
-  position: relative;
-  background-image: url("/img/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 10px;
-  height: 50px;
-}
-.page-buttons::after {
-  content: "";
-  position: relative;
-  background-image: url("/img/arrow.svg");
-  background-repeat: no-repeat;
-  background-position: 0 0;
-  width: 10px;
-  height: 50px;
-  transform: rotate(180deg);
+.progress-container {
+  width: 5%;
+  height: 50%;
+  background: #fff;
+  border-radius: 10px;
 }
 
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  background: rgba(255, 255, 255, 0.4);
-  border-radius: 50%;
-  display: flex;
-  transition: background-color 0.5s ease;
-}
-.dot:hover {
-  background: #ffffff;
-}
-
-.dot-active {
-  cursor: pointer;
-  height: 20px;
-  width: 20px;
+.progress-bar {
   background: #ffc046;
-  border-radius: 50%;
-  display: flex;
-  transition: background-color 0.5s ease;
-}
-.dot-active:hover {
-  background: #fea700;
+  border-radius: 10px;
 }
 
 .social-media-header {
