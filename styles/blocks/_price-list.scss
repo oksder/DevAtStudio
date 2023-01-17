@@ -102,3 +102,42 @@
 .faded {
   opacity: 0.4;
 }
+
+.ribbon {
+  @include flexCenter(column);
+  position: absolute;
+  bottom: -50px;
+  right: -57px;
+  width: 120px;
+  height: 120px;
+  // background: $yellow;
+  overflow: hidden;
+
+  &::before {
+    content: "Best Value";
+    position: absolute;
+    width: 150%;
+    height: 35px;
+    background: $yellow;
+    transform: rotate(-45deg) translateY(20px);
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-weight: 900;
+    color: $green;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 10px;
+    height: 10px;
+    background: $dark-yellow;
+    z-index: -1;
+    box-shadow: 110px -107px $dark-yellow;
+  }
+}
