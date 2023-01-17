@@ -1001,7 +1001,7 @@ footer {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  gap: 230px;
+  gap: 200px;
 }
 
 .price-card {
@@ -1013,7 +1013,7 @@ footer {
 .price-card::before {
   content: "";
   position: absolute;
-  left: -60px;
+  left: -47px;
   top: 0;
   background-image: url("/img/pricetag.png");
   background-repeat: no-repeat;
@@ -1023,9 +1023,26 @@ footer {
   z-index: -1;
 }
 
+.solid::before {
+  display: none;
+}
+
+.solid::after {
+  content: "";
+  position: absolute;
+  left: -47px;
+  top: 0;
+  background-image: url("/img/pricetag-solid.png");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  width: 252px;
+  height: 497px;
+  z-index: -1;
+}
+
 .price-card-name,
 .price-card-number {
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   color: #ffc046;
   font-size: 32px;
   font-weight: bold;
@@ -1033,6 +1050,11 @@ footer {
 
 .dollar {
   color: #ffc046;
+}
+
+.price-card-features {
+  text-align: initial;
+  padding: 35px 0 0 33px;
 }
 
 .price-feature {
