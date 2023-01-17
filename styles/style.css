@@ -58,6 +58,7 @@ input[type=radio].visually-hidden {
   line-height: 24px;
   border: none;
   color: #2b5876;
+  cursor: pointer;
   background: #ffc046;
   box-shadow: inset 7px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 25px;
@@ -641,7 +642,7 @@ a#scroll-btn::after {
 
 .card-back-button {
   border-radius: 0 0 25px 25px;
-  cursor: pointer;
+  padding: 14px 70px;
 }
 .card-back-button:active {
   transform: none;
