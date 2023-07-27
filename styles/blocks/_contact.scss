@@ -1,6 +1,6 @@
 .contact {
   @include flexCenter(column);
-  margin: 300px 0;
+  margin: 150px 0;
 }
 
 .contact-heading:after {
@@ -27,8 +27,8 @@
   bottom: 128px;
   left: 0px;
   background: url("/img/before.png") no-repeat;
-  height: 317px;
-  width: 809px;
+  height: 316px;
+  width: 550px;
 }
 
 .form-wrap:after {
@@ -38,7 +38,7 @@
   left: 0px;
   background: url("/img/after.png") no-repeat;
   height: 259px;
-  width: 809px;
+  width: 550px;
 }
 
 .form-wrap:hover {

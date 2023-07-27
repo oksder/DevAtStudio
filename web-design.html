@@ -167,68 +167,63 @@
         </section>
         <section class="contact">
           <h2 class="contact-heading">Contact Us</h2>
-          <form class="contact-form" action="/action_page.php" method="get">
-            <div class="form-names">
+          <div class="form-wrap">
+            <form class="contact-form" action="/action_page.php" method="get">
+              <div class="form-names">
+                <input
+                  class="form-name input"
+                  type="text"
+                  id="fullname"
+                  name="fullname"
+                  placeholder="Full Name"
+                  required
+                />
+                <input
+                  class="form-companyname input"
+                  type="text"
+                  id="companyname"
+                  name="companyname"
+                  placeholder="Company Name"
+                />
+              </div>
               <input
-                class="form-name input"
-                type="text"
-                id="fullname"
-                name="fullname"
-                placeholder="Full Name"
+                class="form-email input"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="E-mail Address"
                 required
               />
-              <input
-                class="form-companyname input"
-                type="text"
-                id="companyname"
-                name="companyname"
-                placeholder="Company Name"
-              />
-            </div>
-            <input
-              class="form-email input"
-              type="email"
-              id="email"
-              name="email"
-              placeholder="E-mail Address"
-              required
-            />
-            <textarea
-              class="form-message input"
-              id="message"
-              name="message"
-              rows="4"
-              cols="50"
-              placeholder="Enter your message..."
-              required
-            ></textarea>
-            <div class="files-send">
-              <input
-                class="form-file"
-                type="file"
-                id="upload-file"
-                name="myfile"
-              />
-              <label class="files-label" for="upload-file">
-                <img
-                  class="attach file"
-                  src="img/attachment-icon.svg"
-                  alt="attachment icon"
-                  width="35"
-                  height="35"
+              <textarea
+                class="form-message input"
+                id="message"
+                name="message"
+                rows="4"
+                cols="50"
+                placeholder="Enter your message..."
+                required
+              ></textarea>
+              <div class="files-send">
+                <input
+                  class="form-file"
+                  type="file"
+                  id="upload-file"
+                  name="myfile"
                 />
-                Attach File</label
-              >
-              <input class="primary-button" type="submit" value="Send" />
-            </div>
-          </form>
-          <img
-            class="letter-image"
-            src="img/letter-opened.png"
-            alt="Illustration of a letter"
-            width="809"
-            height="794"
-          />
+                <label class="files-label" for="upload-file">
+                  <img
+                    class="attach file"
+                    src="img/attachment-icon.svg"
+                    alt="attachment icon"
+                    width="35"
+                    height="35"
+                  />
+                  Attach File</label
+                >
+                <input class="primary-button" type="submit" value="Send" />
+              </div>
+            </form>
+          </div>
         </section>
       </main>
       <footer>
