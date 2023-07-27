@@ -502,7 +502,7 @@ a#scroll-btn::after {
   width: 23px;
   height: 23px;
   left: -15px;
-  top: 30px;
+  top: 20px;
   background: #ffc046;
   box-shadow: inset 4px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 50%;
@@ -555,7 +555,7 @@ a#scroll-btn::after {
 }
 
 .services {
-  margin: 300px 0;
+  margin: 150px 0;
 }
 
 .services-wrapper {
@@ -689,7 +689,7 @@ a#scroll-btn::after {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  margin: 150px 0;
+  margin: 200px 0;
 }
 
 .contact-heading:after {
@@ -977,7 +977,7 @@ footer {
 
 .price-list {
   position: relative;
-  margin: 300px 0;
+  margin: 150px 0;
 }
 
 .price-list-heading {
