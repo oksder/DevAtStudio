@@ -10,38 +10,27 @@
 
 .main-screen {
   position: relative;
-  padding: 60px 0;
+  padding: 2rem 0;
   height: 100vh;
 }
 
 .main-description {
-  width: 690px;
-  padding: 160px 0;
+  padding: 12rem 0;
 }
 
 .subheading {
-  font-size: 12px;
-  line-height: 16px;
+  font-size: 0.8rem;
+  line-height: 1rem;
   letter-spacing: 0.15em;
   color: $yellow;
 }
 
 .main-screen-heading {
   position: relative;
-  font-size: 40px;
-  line-height: 53px;
+  font-size: 2.5rem;
+  line-height: 3rem;
   letter-spacing: 0.1em;
   color: #ffffff;
-
-  & ::after {
-    content: "";
-    position: absolute;
-    height: 3px;
-    width: 120px;
-    left: 0;
-    bottom: -10px;
-    background: $yellow;
-  }
 }
 
 .yellow-word {
@@ -49,20 +38,20 @@
 }
 
 .main-screen p {
-  font-size: 16px;
-  line-height: 21px;
-  padding: 50px 0;
-  width: 500px;
+  font-size: 1rem;
+  line-height: 1.3rem;
+  padding: 3.1rem 0;
+  width: 31rem;
 }
 
 .signature {
-  padding-top: 30px;
+  padding-top: 1.8rem;
 }
 
 .large-figure {
   position: absolute;
-  right: -100px;
-  bottom: 40px;
+  right: -6.2rem;
+  bottom: 2.5rem;
 
   animation: spin 15s linear infinite;
 }
@@ -78,8 +67,8 @@
 
 .medium-figure {
   position: absolute;
-  right: 100px;
-  bottom: 450px;
+  right: 6.2rem;
+  bottom: 28rem;
   transform: rotate(150deg);
 
   animation: spin 10s linear infinite;
@@ -87,8 +76,8 @@
 
 .small-figure {
   position: absolute;
-  right: -60px;
-  bottom: 420px;
+  right: -4rem;
+  bottom: 26rem;
   transform: rotate(5deg);
 
   animation: spin 10s linear infinite;
@@ -96,25 +85,25 @@
 
 a#scroll-btn {
   position: absolute;
-  height: 40px;
-  width: 25px;
-  border: 1px solid #fff;
+  height: 2.5rem;
+  width: 1.6rem;
+  border: 0.1rem solid #fff;
   margin: auto;
   left: 0;
   right: 0;
-  bottom: 60px;
-  border-radius: 25px;
+  bottom: 3.7rem;
+  border-radius: 1.6rem;
 }
 
 a#scroll-btn::before {
   position: absolute;
   content: "";
   margin: auto;
-  top: 5px;
+  top: 0.3rem;
   left: 0;
   right: 0;
-  height: 6px;
-  width: 6px;
+  height: 0.4rem;
+  width: 0.4rem;
   background-color: #fff;
   border-radius: 50%;
   animation: move-down 2s infinite;
@@ -124,12 +113,12 @@ a#scroll-btn::after {
   position: absolute;
   content: "Scroll Down";
 
-  width: 110px;
+  width: 7rem;
   display: block;
   text-align: center;
-  left: -40px;
-  bottom: -40px;
-  font-size: 16px;
+  left: -2.5rem;
+  bottom: -2.5rem;
+  font-size: 1rem;
   color: #fff;
 }
 
@@ -141,4 +130,7 @@ a#scroll-btn::after {
     transform: translateY(20px);
     opacity: 0;
   }
+}
+
+@media (min-width: $tablet-width) {
 }
